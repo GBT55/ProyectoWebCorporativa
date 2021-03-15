@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria HTML, CSS y JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Zapatillas Kobe</h1>
+    <div class="contenedor-galeria">
+        <img src="img/foto1.jpg" class="myslides">
+        <img src="img/foto2.jpg" class="myslides">
+        <img src="img/foto3.jpg" class="myslides">
+        <img src="img/foto4.jpg" class="myslides">
+        <img src="img/foto5.jpg" class="myslides">
+        <img src="img/foto6.jpg" class="myslides">
+        <img src="img/foto7.jpg" class="myslides">
+        <img src="img/foto8.jpg" class="myslides">
+    </div>
+    <script>
+        var inicio = 0;
+        carrusel();
+
+        function carrusel() {
+            var i;
+            var x = document.getElementsByClassName("myslides")
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            inicio++;
+            if (inicio > x.length) {
+                inicio = 1;
+            }
+            x[inicio - 1].style.display = "block";
+            setTimeout(carrusel, 5000); //Cambiamos la imagen cada 5 segundos
+        }
+    </script>
+</body>
+
+</html>

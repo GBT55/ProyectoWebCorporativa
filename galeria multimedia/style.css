@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background:black;
+    font-family: "Fredoka one", cursive;
+    text-align: center;
+}
+h1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: rgb(233, 233, 1);
+    text-shadow:0 1px 2px purple;
+}
+.contenedor-galeria{
+    width: 800px;
+    height: 320px;
+    overflow: hidden;
+    margin: 50px auto;
+}
+img{
+    width: 800px;
+    height: 320px;
+}
